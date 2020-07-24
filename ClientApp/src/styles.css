@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+.dice {
+    width: 400px;
+   
+}
+
+  .dice button {
+    width: 99px;
+    height: 99px;
+    background: #FF5733;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+
+    .dice button:disabled,
+    button[disabled] {
+     opacity: 0.6;
+    }
+
+    .dice button:disabled:hover,
+    button[disabled]:hover {
+      opacity: 0.6;
+    }
+
+
+  .dice button:hover {
+     opacity: 0.8;
+  }
+
+.shuffle {
+  background: #2E4053;
+  border: 3px solid white;
+  color: white;
+  height: 62px;
+  font-size: 18px;
+  box-shadow: none;
+  border-radius: 3px;
+  min-width: 150px;
+}
+
+.finish {
+  background: #F4D03F;
+  border: 3px solid white;
+  color: white;
+  height: 62px;
+  font-size: 18px;
+  box-shadow: none;
+  border-radius: 3px;
+  min-width: 150px;
+}
+
+.boggle-game {
+    display: flex;
+}
+
+.word-input {
+  height: 56px;
+  font-size: 18px;
+  box-shadow: none;
+  border: 1px solid #2E4053;
+  border-radius: 3px;
+}
