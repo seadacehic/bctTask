@@ -1,6 +1,6 @@
 <h1>Boggle game!</h1>
 <p>Welcome to our Boggle game application</p>
-
+<h4 id="timer"></h4>
 <div class="boggle-game">
   <section id="dice-grid">
     <div class="dice">
@@ -8,10 +8,7 @@
         {{ letter.value }}
       </button>
     </div>
-
-
   </section>
-
   <div>
     <p> {{word}} </p>
     <button class="clear" (click)="clearWord()"  [disabled]="word.length == 0"> Clear </button>
@@ -21,19 +18,17 @@
       <ul>
         <li *ngFor="let word of words">{{word}}</li>
       </ul>
+      <div *ngIf="result >=0">
+        <h4 > Your result: {{result}} points </h4>
+        <p> Click on the button bellow if you want to start new game. </p>
+        <button class="shuffle" (click)="clearState()"> New game </button>
+      </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+  
     <div>
 
     </div>
   </div>
 
 </div>
-<button class="shuffle" (click)="clearState()"> New game </button>
-<button class="finish" (click)="sendWords()"> Finish </button>
+
