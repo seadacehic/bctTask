@@ -14,6 +14,7 @@
 
   <div>
     <p> {{word}} </p>
+    <button class="clear" (click)="clearWord()"  [disabled]="word.length == 0"> Clear </button>
     <button class="finish" (click)="saveWord()" [disabled]="word.length < 3"> Save word </button>
     <p> Min 3 letter per word required </p>
     <div>
@@ -34,5 +35,5 @@
   </div>
 
 </div>
-<button class="shuffle" (click)="generateRandomLetters()"> Shuffle </button>
-<button class="finish" (click)="sendWords()"> Send words </button>
+<button class="shuffle" (click)="clearState()"> New game </button>
+<button class="finish" (click)="sendWords()"> Finish </button>

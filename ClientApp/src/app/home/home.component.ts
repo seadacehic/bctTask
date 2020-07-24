@@ -46,13 +46,15 @@ export class HomeComponent {
     this.letters = randomLetters;
   }
 
-  public cleanState() {
-
-    this.letters.forEach(function (item) {
-      item.selected = false;
-    });
+  public clearState() {
+    if (this.letters.length > 0) {
+      this.letters.forEach(function (item) {
+        item.selected = false;
+      });
+    }
 
     this.word = '';
+    this.words = [];
   }
 
   public saveWord() {
@@ -66,5 +68,15 @@ export class HomeComponent {
 
       this.word = '';
     }
+  }
+
+  public clearWord() {
+    if (this.letters.length > 0) {
+      this.letters.forEach(function (item) {
+        item.selected = false;
+      });
+    }
+
+    this.word = '';
   }
 }
